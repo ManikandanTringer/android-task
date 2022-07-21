@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button fragmentTask,serviceTask;
+    Button fragmentTask,serviceTask,broadcastTask;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(getBaseContext(),ServiceTask.class);
+                startActivity(intent);
+            }
+        });
+        broadcastTask=(Button) findViewById(R.id.broadcast);
+        broadcastTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(),BroadcastTask.class);
                 startActivity(intent);
             }
         });

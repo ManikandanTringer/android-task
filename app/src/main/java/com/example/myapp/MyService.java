@@ -1,6 +1,7 @@
 package com.example.myapp;
 
 import android.app.Service;
+import android.content.BroadcastReceiver;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Binder;
@@ -8,10 +9,14 @@ import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
 public class MyService extends Service {
     private MediaPlayer player;
     private int count;
     static final String TAG="STARTED_SERVICE";
+    LocalBroadcastManager localBroadcastManager;
+
     private boolean isCounting =false;
 
     class MyServiceBinder extends Binder{
@@ -29,11 +34,15 @@ public class MyService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+
+        localBroadcastManager=LocalBroadcastManager.getInstance(getApplicationContext());
+
         Log.i(TAG,"Service has started task");
         isCounting=true;
         new Thread((Runnable) ()->{
             setCount();
         }).start();
+
 
 
         player=MediaPlayer.create(this, Settings.System.DEFAULT_ALARM_ALERT_URI);
@@ -50,6 +59,10 @@ public class MyService extends Service {
                 if(isCounting) {
                     count = count + 1;
                     Log.i(TAG, String.valueOf(count));
+                    Intent intent=new Intent("my.custom.action.tag");
+                    intent.putExtra("msg",count);
+                    localBroadcastManager.sendBroadcast(intent);
+
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -84,7 +97,7 @@ public class MyService extends Service {
 //        isCounting=false;
         stop();
         Log.i(TAG,"Service has Destroyed");
-
+        if(player != null)
         player.stop();
 
     }

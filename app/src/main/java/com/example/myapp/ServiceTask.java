@@ -1,6 +1,7 @@
 package com.example.myapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -11,6 +12,7 @@ import android.os.IBinder;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -26,12 +28,14 @@ public class ServiceTask extends AppCompatActivity {
     boolean isServiceBound=false;
     private Intent serviceIntent;
     private TextView display;
+    private EditText displayBoard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_service_task);
         display=(TextView) findViewById(R.id.displayValue);
+        displayBoard=(EditText)findViewById(R.id.displayBoard);
 
         serviceIntent=new Intent(getApplicationContext(),MyService.class);
         bind=(Button) findViewById(R.id.bind);
@@ -113,4 +117,20 @@ public class ServiceTask extends AppCompatActivity {
         Intent intent=new Intent(this,MyService.class);
         stopService(intent);
     }
+//Music play and stop onclick
+    public void playPressed(View view) {
+        String input = displayBoard.getText().toString();
+        Intent serviceIntent=new Intent(this,ServiceForeground.class);
+        serviceIntent.putExtra("EXTRA_INPUT",input);
+//        startService(serviceIntent);
+        ContextCompat.startForegroundService(this,serviceIntent);
+
+    }
+
+    public void stopPressed(View view) {
+        Intent serviceIntent=new Intent(this,ServiceForeground.class);
+        stopService(serviceIntent);
+
+    }
+
 }
