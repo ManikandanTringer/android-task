@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button fragmentTask,serviceTask,broadcastTask;
+    private Button fragmentTask,serviceTask,broadcastTask,shopping;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +38,19 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        shopping=(Button)findViewById(R.id.shopping);
+        shopping.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(),Shopping.class);
+                startActivity(intent);
+            }
+        });
 
     }
+
+//    @Override
+//    public void onClick(View view) {
+//
+//    }
 }

@@ -11,18 +11,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/fragmentTask"
-        android:text="Fragment" />
+        android:text="Fragment"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/serviceTask"
-        android:text="Service" />
+        android:text="Service"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:id="@+id/broadcast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Broadcast receiver" />
+        android:text="Broadcast receiver"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/shopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shopping"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp" />
 
 
 </LinearLayout>
