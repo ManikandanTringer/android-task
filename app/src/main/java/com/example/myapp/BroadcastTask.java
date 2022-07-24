@@ -13,7 +13,7 @@ import android.widget.Button;
 public class BroadcastTask extends AppCompatActivity {
 
     private Button send;
-    private BroadcastReceiver broadcastReceiver;
+    private BroadcastReceiver broadcastReceiver=null;
     LocalBroadcastManager localBroadcastManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

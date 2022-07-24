@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button fragmentTask,serviceTask,broadcastTask,shopping;
+    private Button fragmentTask,serviceTask,broadcastTask,shopping,bottomNavBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(),Shopping.class);
+                startActivity(intent);
+            }
+        });
+        bottomNavBtn=(Button) findViewById(R.id.bottomNavBtn);
+        bottomNavBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(),FrontPage.class);
                 startActivity(intent);
             }
         });

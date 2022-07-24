@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Shopping">
+
+<FrameLayout
+    android:id="@+id/fragment_formtype"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Shopping">
+    android:layout_height="400dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="673dp"
-        android:orientation="vertical">
+<Button
+    android:id="@+id/signupBtn"
+    android:layout_width="150dp"
+    android:layout_height="60dp"
+    android:backgroundTint="@color/black"
+    android:text="Sign Up"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="50dp"
+    android:layout_marginStart="50dp"/>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="38dp" />
-    </LinearLayout>
+<Button
+    android:id="@+id/registerBtn"
+    android:layout_width="150dp"
+    android:layout_height="60dp"
+    android:backgroundTint="@color/black"
+    android:text="Register"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginBottom="50dp"
+    android:layout_marginEnd="50dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:text="Button" />
-
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
