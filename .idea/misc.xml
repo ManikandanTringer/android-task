@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-anydpi-v24/ic_running.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_shopping_cart_24.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_broadcast_task.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_fragment_task.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_front_page.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_layout_demo.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_service_task.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_shopping.xml" value="0.1" />
@@ -14,8 +16,11 @@
         <entry key="app/src/main/res/layout/fragment_2.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_3.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_cart.xml" value="0.19375" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19270833333333334" />
+        <entry key="app/src/main/res/layout/fragment_constraint.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/fragment_frame.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_relavite.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />

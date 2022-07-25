@@ -28,6 +28,8 @@ public class Shopping extends AppCompatActivity{
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         setContentView(R.layout.activity_shopping);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_formtype,
+                new SignupFragment()).commit();
         signupBtn=(Button) findViewById(R.id.signupBtn);
         registerBtn=(Button)findViewById(R.id.registerBtn);
         signupBtn.setOnClickListener(new View.OnClickListener() {
@@ -48,10 +50,12 @@ public class Shopping extends AppCompatActivity{
 
     private void replaceFragment(Fragment fragment) {
 
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_formtype,fragment);
-        fragmentTransaction.commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_formtype,
+                fragment).commit();
+//        FragmentManager fragmentManager=getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.fragment_formtype,fragment);
+//        fragmentTransaction.commit();
 
     }
 

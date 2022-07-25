@@ -19,6 +19,9 @@
         android:theme="@style/Theme.MyApp"
         tools:targetApi="31">
         <activity
+            android:name=".LayoutDemo"
+            android:exported="false" />
+        <activity
             android:name=".FrontPage"
             android:exported="false" />
         <activity
