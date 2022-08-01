@@ -53,11 +53,12 @@ public class FragmentTask extends AppCompatActivity {
             default: fragment = new Fragment1();break;
         }
 
-        fragmentTransaction=fragmentManager.beginTransaction().setReorderingAllowed(true);
-        fragmentTransaction.add(R.id.fragment_container,fragment,"demofragment");
-        fragmentTransaction.addToBackStack("frag");
-        fragmentTransaction.commit();
-//        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,fragment).commit();
+
+//        fragmentTransaction=fragmentManager.beginTransaction().setReorderingAllowed(true);
+//        fragmentTransaction.add(R.id.fragment_container,fragment,"demofragment");
+//        fragmentTransaction.addToBackStack("frag");
+//        fragmentTransaction.commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,fragment).commit();
 
     }
 
