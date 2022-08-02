@@ -32,12 +32,14 @@ public class ConstraintFragment extends Fragment {
 
 //        Placeholder
         placeholder=(Placeholder) view.findViewById(R.id.placeholder);
+//
+//        return view;
+//    }
+//
 
         return view;
     }
-
     public void swapView(View view) {
-
-//        placeholder.setContentId(view.getId());
+        placeholder.setContentId(view.getId());
     }
 }

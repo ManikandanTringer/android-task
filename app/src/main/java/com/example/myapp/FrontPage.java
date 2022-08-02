@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener;
 
 public class FrontPage extends AppCompatActivity {
 
@@ -26,7 +25,7 @@ public class FrontPage extends AppCompatActivity {
                 case R.id.nav_home:
                     selectedFragment=new HomeFragment();
                     break;
-                case R.id.nav_cart:
+                case R.id.cart:
                     selectedFragment=new CartFragment();
                     break;
                 case R.id.nav_search:

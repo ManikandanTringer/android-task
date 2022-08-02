@@ -5,15 +5,23 @@
       <map>
         <entry key="app/src/main/res/drawable-anydpi-v24/ic_running.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/borderstyle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/ic_shopping_cart_24.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_broadcast_task.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_dialog_snackbar.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/layout/activity_fragment_task.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_front_page.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_layout_demo.xml" value="0.15" />
         <entry key="app/src/main/res/layout/activity_logo.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/activity_menus_task.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/layout/activity_service_task.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_shopping.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/constraint_chains.xml" value="0.15818725951261223" />
+        <entry key="app/src/main/res/layout/constraint_group.xml" value="0.15818725951261223" />
+        <entry key="app/src/main/res/layout/constraint_guideline_barrier_chain.xml" value="0.15818725951261223" />
+        <entry key="app/src/main/res/layout/constraint_placeholder.xml" value="0.15818725951261223" />
+        <entry key="app/src/main/res/layout/custom_dialog.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/layout/fragment_1.xml" value="0.3232421875" />
         <entry key="app/src/main/res/layout/fragment_2.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_3.xml" value="0.19375" />
@@ -27,6 +35,9 @@
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/floating_context_menu.xml" value="0.15818725951261223" />
+        <entry key="app/src/main/res/menu/option_menu.xml" value="0.15818725951261223" />
+        <entry key="app/src/main/res/menu/popup_menu.xml" value="0.15818725951261223" />
       </map>
     </option>
   </component>

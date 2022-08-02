@@ -2,15 +2,18 @@
     <string name="app_name">MyApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string-array name="person">
-        <item>"A"</item>
-        <item>"B"</item>
-        <item>"C"</item>
-        <item>"D"</item>
-        <item>"E"</item>
-        <item>"F"</item>
-        <item>"G"</item>
-        <item>"H"</item>
-        <item>"I"</item>
+    <string name="signin">Sign In</string>
+    <string name="cancel">Cancel</string>
+    <string-array name="state">
+        <item>"Andhra Pradesh"</item>
+        <item>"Arunachal Pradesh"</item>
+        <item>"Assam"</item>
+        <item>"Bihar"</item>
+        <item>"Chhattisgarh"</item>
+        <item>"Goa"</item>
+        <item>"Gujarat"</item>
+        <item>"Haryana"</item>
+        <item>"Tamilnadu"</item>
+        <item>"Uttarakhand"</item>
     </string-array>
 </resources>

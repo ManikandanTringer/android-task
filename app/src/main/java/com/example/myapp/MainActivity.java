@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button fragmentTask,serviceTask,broadcastTask,shopping,bottomNavBtn,layoutDemoBtn;
+    private Button fragmentTask,serviceTask,broadcastTask,shopping,bottomNavBtn,layoutDemoBtn,dialogSnackbar,menus_task;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +59,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(),LayoutDemo.class);
+                startActivity(intent);
+            }
+        });
+
+        dialogSnackbar=(Button) findViewById(R.id.dialog_snackbar);
+        dialogSnackbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(),DialogSnackbar.class);
+                startActivity(intent);
+            }
+        });
+        menus_task=(Button) findViewById(R.id.menus_task);
+        menus_task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getBaseContext(),MenusTaskActivity.class);
                 startActivity(intent);
             }
         });
