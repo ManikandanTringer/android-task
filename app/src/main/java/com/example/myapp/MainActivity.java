@@ -1,15 +1,15 @@
 package com.example.myapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button fragmentTask,serviceTask,broadcastTask,shopping,bottomNavBtn,layoutDemoBtn,dialogSnackbar,menus_task;
+    private Button fragmentTask,serviceTask,broadcastTask,shopping,bottomNavBtn,layoutDemoBtn,dialogSnackbar,menus_task,calculator_btn,thread_task;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +76,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getBaseContext(),MenusTaskActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        calculator_btn=(Button) findViewById(R.id.calculator_btn);
+        calculator_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getBaseContext(),CalculatorActivity.class);
+                startActivity(intent);
+            }
+        });
+        thread_task=(Button) findViewById(R.id.thread_task);
+        thread_task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getBaseContext(),ThreadActivity.class);
                 startActivity(intent);
             }
         });

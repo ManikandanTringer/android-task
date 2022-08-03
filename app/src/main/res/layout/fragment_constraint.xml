@@ -6,24 +6,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".ConstraintFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        layout="@layout/constraint_guideline_barrier_chain"
+        android:layout_width="114dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-<!--    <include-->
-<!--        layout="@layout/constraint_guideline_barrier_chain"-->
-<!--        android:layout_width="114dp"-->
-<!--        android:layout_height="58dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
-<!--    <include-->
-<!--        layout="@layout/constraint_placeholder" />-->
+    <include
+        layout="@layout/constraint_group"
+        android:layout_width="410dp"
+        android:layout_height="205dp" />
 
-<!--    <include-->
-<!--        layout="@layout/constraint_group"-->
-<!--        android:layout_width="410dp"-->
-<!--        android:layout_height="205dp" />-->
+            <include
+                layout="@layout/constraint_chains" />
+</LinearLayout>
 
-<!--        <include-->
-<!--            layout="@layout/constraint_chains" />-->
 
 
 

@@ -4,11 +4,14 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-anydpi-v24/ic_running.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/backspace.xml" value="0.1485" />
         <entry key="app/src/main/res/drawable/borderstyle.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/ic_shopping_cart_24.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_broadcast_task.xml" value="0.19375" />
-        <entry key="app/src/main/res/layout/activity_dialog_snackbar.xml" value="0.15904232578024796" />
+        <entry key="app/src/main/res/layout/activity_calculator.xml" value="0.15904232578024796" />
+        <entry key="app/src/main/res/layout/activity_dialog_snackbar.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_fragment_task.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_front_page.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_layout_demo.xml" value="0.15" />
@@ -17,6 +20,7 @@
         <entry key="app/src/main/res/layout/activity_menus_task.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/layout/activity_service_task.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_shopping.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_thread.xml" value="0.1466438648995297" />
         <entry key="app/src/main/res/layout/constraint_chains.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/layout/constraint_group.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/layout/constraint_guideline_barrier_chain.xml" value="0.15818725951261223" />

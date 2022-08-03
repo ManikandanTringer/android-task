@@ -66,5 +66,18 @@
         android:layout_gravity="center"
         android:text="Menus" />
 
+    <Button
+        android:id="@+id/calculator_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Calculator" />
+    <Button
+        android:id="@+id/thread_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Thread" />
+
 
 </LinearLayout>
