@@ -2,9 +2,12 @@ package com.example.myapp;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +15,7 @@ public class ThreadActivity extends AppCompatActivity {
 
     private static final String TAG = "ThreadActivity";
     private Button startThread;
+    private TextView countDisplay;
 
     private Handler mainHandler=new Handler();
 
@@ -20,7 +24,7 @@ public class ThreadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thread);
-
+        countDisplay=(TextView) findViewById(R.id.countDisplay);
         startThread=(Button) findViewById(R.id.startThread);
 
     }
@@ -40,6 +44,10 @@ public class ThreadActivity extends AppCompatActivity {
         isStopThread=true;
     }
 
+    public void sampleFunction(View view) {
+        Toast.makeText(this, "Pressed", Toast.LENGTH_SHORT).show();
+    }
+
     class SampleThread extends Thread{
         int seconds;
         SampleThread(int seconds){
@@ -48,7 +56,7 @@ public class ThreadActivity extends AppCompatActivity {
         @Override
         public void run() {
             for (int i=0;i<seconds;i++){
-                Log.d(TAG, "startThread: "+i);
+                Log.d(TAG, "startThread: "+Thread.currentThread().getId() +i);
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -64,15 +72,23 @@ public class ThreadActivity extends AppCompatActivity {
         }
         @Override
         public void run() {
-            for (int i=0;i<seconds;i++){
+            for (int i=1;i<=seconds;i++){
                 if(isStopThread)
                     return;
                 if(i==5){
-//                    Handler threadHandler=new Handler(Looper.getMainLooper());
-                    mainHandler.post(new Runnable() {
+                    Handler threadHandler=new Handler(Looper.getMainLooper());
+                    threadHandler.post(new Runnable() {
                         @Override
                         public void run() {
                             startThread.setText("Running");
+                        }
+
+                    });
+
+                    countDisplay.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            countDisplay.setText("Completed");
                         }
                     });
 

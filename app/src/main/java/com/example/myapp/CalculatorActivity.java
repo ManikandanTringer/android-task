@@ -2,12 +2,14 @@
 
     import android.os.Bundle;
     import android.text.SpannableStringBuilder;
+    import android.util.Log;
     import android.view.View;
     import android.widget.EditText;
+    import android.widget.Toast;
 
     import androidx.appcompat.app.AppCompatActivity;
 
-    import org.mariuszgromada.math.mxparser.Expression;
+    import java.util.Stack;
 
 //    import org.mariuszgromada.math.mxparser.Expression;
 
@@ -145,11 +147,179 @@
 
             String userExpression=display.getText().toString();
 
-            Expression expression=new Expression(userExpression);
-            String result=String.valueOf(expression.calculate());
-            display.setText(result);
-            display.setSelection(result.length());
+            char[] tokens = userExpression.toCharArray();
+
+            // Stack for numbers: 'values'
+            Stack<Double> values = new Stack<Double>();
+
+            // Stack for Operators: 'ops'
+            Stack<Character> ops = new Stack<Character>();
+
+            for (int i = 0; i < tokens.length; i++)
+            {
+
+                // Current token is a
+                // whitespace, skip it
+                if (tokens[i] == ' ')
+                    continue;
+
+                // Current token is a number,
+                // push it to stack for numbers
+                if (tokens[i] >= '0' &&
+                        tokens[i] <= '9')
+                {
+                    StringBuffer sbuf = new
+                            StringBuffer();
+
+                    // There may be more than one
+                    // digits in number
+                    while (i < tokens.length &&
+                            tokens[i] >= '0' &&
+                            tokens[i] <= '9')
+                        sbuf.append(tokens[i++]);
+                    values.push(Double.parseDouble(sbuf.
+                            toString()));
+
+                    // right now the i points to
+                    // the character next to the digit,
+                    // since the for loop also increases
+                    // the i, we would skip one
+                    //  token position; we need to
+                    // decrease the value of i by 1 to
+                    // correct the offset.
+                    i--;
+                }
+
+                // Current token is an opening brace,
+                // push it to 'ops'
+                else if (tokens[i] == '(')
+                    ops.push(tokens[i]);
+
+                    // Closing brace encountered,
+                    // solve entire brace
+                else if (tokens[i] == ')')
+                {
+                    while (ops.peek() != '(')
+                        values.push(applyOp(ops.pop(),
+                                values.pop(),
+                                values.pop()));
+                    ops.pop();
+                }
+
+                // Current token is an operator.
+                else if (tokens[i] == '+' ||
+                        tokens[i] == '-' ||
+                        tokens[i] == '*' ||
+                        tokens[i] == '/')
+                {
+                    // While top of 'ops' has same
+                    // or greater precedence to current
+                    // token, which is an operator.
+                    // Apply operator on top of 'ops'
+                    // to top two elements in values stack
+                    while (!ops.empty() &&
+                            hasPrecedence(tokens[i],
+                                    ops.peek()))
+                        values.push(applyOp(ops.pop(),
+                                values.pop(),
+                                values.pop()));
+
+                    // Push current token to 'ops'.
+                    ops.push(tokens[i]);
+                }
+            }
+
+            // Entire expression has been
+            // parsed at this point, apply remaining
+            // ops to remaining values
+            while (!ops.empty())
+                values.push(applyOp(ops.pop(),
+                        values.pop(),
+                        values.pop()));
+
+            // Top of 'values' contains
+            // result, return it
+            String res=values.pop().toString();
+
+
+                String newRes=checkDecimal(res);
+                Log.d("cal",res);
+                display.setText(newRes);
+                display.setSelection(newRes.length());
+
+//            return values.pop();
+        }
+
+
+
+//            Expression expression=new Expression(userExpression);
+//            String result=String.valueOf(expression.calculate());
+//            display.setText(result);
+//            display.setSelection(result.length());
+
+
+
+        // Returns true if 'op2' has higher
+        // or same precedence as 'op1',
+        // otherwise returns false.
+        public static boolean hasPrecedence(
+                char op1, char op2)
+        {
+            if (op2 == '(' || op2 == ')')
+                return false;
+            if ((op1 == '*' || op1 == '/') &&
+                    (op2 == '+' || op2 == '-'))
+                return false;
+            else
+                return true;
+        }
+
+
+        // A utility method to apply an
+        // operator 'op' on operands 'a'
+        // and 'b'. Return the result.
+        public static double applyOp(char op,
+                                     Double b, Double a)
+        {
+
+            switch (op)
+            {
+                case '+':
+                    return a + b;
+                case '-':
+                    return a - b;
+                case '*':
+                    return a * b;
+                case '/':
+                    if (b == 0){
+//                        setInfinty();
+                        try{
+                            double c=a/b;
+                            
+                        }catch (Exception e){
+                            
+                        }
+                    }
+                    return a / b;
+//                default:
+//                    throw new IllegalStateException("Unexpected value: " + op);
+            }
+            return 0;
+        }
+
+        private void setInfinty() {
+        display.setText("Infinity");
+            Toast.makeText(getBaseContext(), "Cannot divide by Zero", Toast.LENGTH_SHORT).show();
 
         }
 
+        public String checkDecimal(String result){
+        String a[]=result.split("\\.");
+        if(a.length>1){
+            if(a[1].equals("0")){
+                result=a[0];
+            }
+        }
+        return result;
+}
 }
