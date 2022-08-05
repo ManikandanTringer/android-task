@@ -38,6 +38,8 @@
         <item>"Uttarakhand"</item>
     </string-array>
     <string name="defaultdisplay">0</string>
+    <string name="actionbartitle">Welcome Files</string>
+    <string name="actionbarSubtitle">Subtitle</string>
 
 
 </resources>

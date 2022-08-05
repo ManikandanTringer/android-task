@@ -1,19 +1,29 @@
 package com.example.myapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button fragmentTask,serviceTask,broadcastTask,shopping,bottomNavBtn,layoutDemoBtn,dialogSnackbar,menus_task,calculator_btn,thread_task;
+    private Toolbar toolbar;
+
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        toolbar=findViewById(R.layout.appbar);
+//        setSupportActionBar(toolbar);
+
+
         fragmentTask=(Button) findViewById(R.id.fragmentTask);
         fragmentTask.setOnClickListener(new View.OnClickListener() {
             @Override

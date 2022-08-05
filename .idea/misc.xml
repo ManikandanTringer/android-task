@@ -10,13 +10,18 @@
         <entry key="app/src/main/res/drawable/button_state.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/button_text.xml" value="0.1375" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.137" />
+        <entry key="app/src/main/res/drawable/ic_baseline_music_note_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/ic_email_24.xml" value="0.1375" />
         <entry key="app/src/main/res/drawable/ic_shopping_cart_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/input_state.xml" value="0.1375" />
+        <entry key="app/src/main/res/layout/activity_adapter.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_app_bar_demo.xml" value="0.15904232578024796" />
+        <entry key="app/src/main/res/layout/activity_bar_task.xml" value="0.1466438648995297" />
         <entry key="app/src/main/res/layout/activity_broadcast_task.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_calculator.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/layout/activity_dialog_snackbar.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/activity_download.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/layout/activity_fragment_task.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_front_page.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_layout_demo.xml" value="0.15" />
@@ -26,6 +31,8 @@
         <entry key="app/src/main/res/layout/activity_service_task.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_shopping.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_thread.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/adapter_listview.xml" value="0.15818725951261223" />
+        <entry key="app/src/main/res/layout/appbar.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/layout/constraint_chains.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/layout/constraint_group.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/layout/constraint_guideline_barrier_chain.xml" value="0.15818725951261223" />
@@ -44,6 +51,7 @@
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.22" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/download.xml" value="0.11" />
         <entry key="app/src/main/res/menu/floating_context_menu.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/menu/option_menu.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/menu/popup_menu.xml" value="0.15818725951261223" />
