@@ -19,14 +19,28 @@
         android:theme="@style/Theme.MyApp"
         tools:targetApi="31">
         <activity
+            android:name=".List_CustomAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".List_ArrayAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".List_SimpleAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ScrollinTask"
+            android:exported="false" />
+        <activity
             android:name=".DownloadActivity"
-            android:exported="false" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ThreadActivity" />
         </activity>
         <activity
             android:name=".AppBarDemo"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.MyApp.NoActionbar" />
         <activity
             android:name=".AdapterActivity"
             android:exported="false" />
@@ -38,7 +52,8 @@
             android:exported="false" />
         <activity
             android:name=".MenusTaskActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".DialogSnackbar"
             android:exported="false" />

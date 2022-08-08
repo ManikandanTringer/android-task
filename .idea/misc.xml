@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/drawable-anydpi-v24/ic_running.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/backspace.xml" value="0.1485" />
         <entry key="app/src/main/res/drawable/borderstyle.xml" value="0.1" />
@@ -15,8 +16,8 @@
         <entry key="app/src/main/res/drawable/ic_email_24.xml" value="0.1375" />
         <entry key="app/src/main/res/drawable/ic_shopping_cart_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/input_state.xml" value="0.1375" />
-        <entry key="app/src/main/res/layout/activity_adapter.xml" value="0.18" />
-        <entry key="app/src/main/res/layout/activity_app_bar_demo.xml" value="0.15904232578024796" />
+        <entry key="app/src/main/res/layout/activity_adapter.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_app_bar_demo.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_bar_task.xml" value="0.1466438648995297" />
         <entry key="app/src/main/res/layout/activity_broadcast_task.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_calculator.xml" value="0.15904232578024796" />
@@ -25,13 +26,18 @@
         <entry key="app/src/main/res/layout/activity_fragment_task.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_front_page.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_layout_demo.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_list_array_adapter.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/activity_list_custom_adapter.xml" value="0.15904232578024796" />
+        <entry key="app/src/main/res/layout/activity_list_simple_adapter.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/layout/activity_logo.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/activity_menus_task.xml" value="0.15904232578024796" />
+        <entry key="app/src/main/res/layout/activity_scrollin_task.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_service_task.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_shopping.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_thread.xml" value="0.25" />
         <entry key="app/src/main/res/layout/adapter_listview.xml" value="0.15818725951261223" />
+        <entry key="app/src/main/res/layout/adapter_view_layout.xml" value="0.15904232578024796" />
         <entry key="app/src/main/res/layout/appbar.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/layout/constraint_chains.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/layout/constraint_group.xml" value="0.15818725951261223" />
@@ -50,6 +56,8 @@
         <entry key="app/src/main/res/layout/fragment_relavite.xml" value="0.18" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/list_view_holder.xml" value="0.15818725951261223" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.15818725951261223" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
         <entry key="app/src/main/res/menu/download.xml" value="0.11" />
         <entry key="app/src/main/res/menu/floating_context_menu.xml" value="0.15818725951261223" />

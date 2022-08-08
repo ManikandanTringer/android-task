@@ -11,7 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button fragmentTask,serviceTask,broadcastTask,shopping,bottomNavBtn,layoutDemoBtn,dialogSnackbar,menus_task,calculator_btn,thread_task;
+    private Button fragmentTask,serviceTask,broadcastTask,toolbarTask,bottomNavBtn,layoutDemoBtn,dialogSnackbar,menus_task,calculator_btn,thread_task,adapter_task;
     private Toolbar toolbar;
 
     @SuppressLint("ResourceType")
@@ -48,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        shopping=(Button)findViewById(R.id.shopping);
-        shopping.setOnClickListener(new View.OnClickListener() {
+        toolbarTask=(Button)findViewById(R.id.toolbarTask);
+        toolbarTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(),Shopping.class);
+                Intent intent = new Intent(getBaseContext(),AppBarDemo.class);
                 startActivity(intent);
             }
         });
@@ -107,7 +107,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        adapter_task=(Button) findViewById(R.id.adapter_task);
+        adapter_task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getBaseContext(),List_ArrayAdapter.class);
+                startActivity(intent);
+            }
+        });
     }
 
 //    @Override

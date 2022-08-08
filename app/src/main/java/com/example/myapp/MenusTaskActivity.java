@@ -1,28 +1,44 @@
 package com.example.myapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.PopupMenu;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MenusTaskActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener{
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+public class MenusTaskActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener, AdapterView.OnItemSelectedListener{
 
     private  TextView textView;
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menus_task);
+
+        Spinner spinner=findViewById(R.id.spinner_state);
+        ArrayAdapter<CharSequence> adapter =ArrayAdapter.createFromResource(this,R.array.state, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+
 //        Context menu
         textView=(TextView) findViewById(R.id.text_contextmenu);
         registerForContextMenu(textView);
+
+//        Toolbar
+        toolbar=(Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
 
     @Override
@@ -110,6 +126,25 @@ public class MenusTaskActivity extends AppCompatActivity implements PopupMenu.On
             default:
                 return false;
         }
+
+    }
+
+//    @Override
+//    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//
+//    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+        String text=adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(adapterView.getContext(), text, Toast.LENGTH_SHORT).show();
+
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
 }

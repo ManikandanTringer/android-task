@@ -4,84 +4,104 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
-    <include
-        layout="@layout/appbar" />
+<!--    <include-->
+<!--        layout="@layout/appbar" />-->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragmentTask"
-        android:text="Fragment"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/serviceTask"
-        android:text="Service"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragmentTask"
+            android:text="Fragment"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/serviceTask"
+            android:text="Service"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
 
-    <Button
-        android:id="@+id/broadcast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Broadcast receiver"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
-    <Button
-        android:id="@+id/shopping"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Shopping"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp" />
+        <Button
+            android:id="@+id/broadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Broadcast receiver"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/toolbarTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ToolbarTask"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
 
-    <Button
-        android:id="@+id/bottomNavBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Bottom Navigatiom" />
+        <Button
+            android:id="@+id/bottomNavBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Bottom Navigatiom" />
 
-    <Button
-        android:id="@+id/layoutDemo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:text="Layouts" />
+        <Button
+            android:id="@+id/layoutDemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Layouts" />
 
-    <Button
-        android:id="@+id/dialog_snackbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Dialog Snackbar" />
-    <Button
-        android:id="@+id/menus_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Menus" />
+        <Button
+            android:id="@+id/dialog_snackbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Dialog Snackbar" />
+        <Button
+            android:id="@+id/menus_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Menus" />
 
-    <Button
-        android:id="@+id/calculator_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Calculator" />
-    <Button
-        android:id="@+id/thread_task"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/button_state"
-        android:textColor="@drawable/button_text"
-        android:text="Thread" />
+        <Button
+            android:id="@+id/calculator_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Calculator" />
+        <Button
+            android:id="@+id/thread_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_state"
+            android:textColor="@drawable/button_text"
+            android:layout_marginTop="20dp"
+            android:text="Thread" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/adapter_task"
+            android:text="adapter task"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
 
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </LinearLayout>

@@ -36,6 +36,11 @@
         <item>"Haryana"</item>
         <item>"Tamilnadu"</item>
         <item>"Uttarakhand"</item>
+        <item>"Kerala"</item>
+        <item>"West Bengal"</item>
+        <item>"Pondichery"</item>
+        <item>"Kashmir"</item>
+        <item>"Uttarakhand"</item>
     </string-array>
     <string name="defaultdisplay">0</string>
     <string name="actionbartitle">Welcome Files</string>
